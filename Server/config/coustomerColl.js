@@ -1,0 +1,29 @@
+const mongoose=require('mongoose')
+mongoose.connect("mongodb://127.0.0.1:27017/store")
+const customerScheme=new mongoose.Schema({
+    fullname:{
+        type:String,
+        required:true
+    },
+    phone:{
+        type:String,
+        required:true
+    },
+    address:{
+        type:String,
+        required:true
+    },email:{
+        type:String,
+        required:true
+    },city:{
+        type:String,
+        required:true
+    },postolCode:{
+        type:String,
+        required:true
+    },CurrentDate:{
+        type:Date,
+        default:Date.now
+    }
+})
+module.exports=mongoose.model("customerData",customerScheme)
