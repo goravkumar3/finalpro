@@ -1,10 +1,10 @@
 const mongoose=require('mongoose')
 mongoose.connect("mongodb://127.0.0.1:27017/store")
 const cartScheme=new mongoose.Schema({
-    productId:{
-        type:String,
-        required:true
-    },
+    productId:[{
+            type:mongoose.Schema.Types.ObjectId,
+            ref:'Product'
+          }],
     userId:{
         type:String
     },
@@ -12,7 +12,8 @@ const cartScheme=new mongoose.Schema({
         type:String,
         required:true
     },quantity:{
-        type:Array
+        type:Number,
+        required:true
     }
 })
 module.exports=mongoose.model("cart",cartScheme)

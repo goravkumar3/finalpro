@@ -15,12 +15,15 @@ const productScheme=new mongoose.Schema({
     },productImageUrl:{
         type:Array
     },productColor:{
-        type:Array,
-        required:true
+        type:Array
     },
     productQuantity:{
         type:Number,
         default:1
+    },
+    productCategory:{
+        type:String,
+        required:true
     },
     CurrentDate:{
         type:Date,
