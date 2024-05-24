@@ -11,7 +11,10 @@
   },
   "dependencies": {
     "@react-icons/all-files": "^4.1.0",
+<<<<<<< HEAD:Server/client/package.json
     "axios": "^1.6.8",
+=======
+>>>>>>> 3e3c5023fac7b31fa9c55b673cc4b581da3ca846:client/package.json
     "gsap": "^3.12.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
